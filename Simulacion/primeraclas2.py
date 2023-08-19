@@ -1,2 +1,2 @@
 import numpy as np 
-A = np.array([1,2],[2,3])
+A = np.array([1,4],[2,3])
