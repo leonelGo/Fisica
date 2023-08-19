@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mi primera web</title>
+    <!--style se pone codigo css-->
+    <style> 
+        table, th, td {
+            border: 1px solid rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>hola beats</td>
+                <td>Gratis</td>
+            </tr>
+            <tr>
+                <td>Chanchito Feliz</td>
+                <td>30 peso</td>
+            </tr>
+            <tr>
+                <td>Chanchito troste muy troste</td>
+                <td>1  peso</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>Total: 31 peso</td>
+        </tfoot>
+
+    </table>
+
+
+
+
+    <!-- ul es lista no ordenada-->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <!-- ol es lista ordenada-->
+    <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>
+            <ol>
+                <li style="list-style: lower-greek;">sub elemento 1</li>
+                <li style="list-style: lower-latin;">sub elemento 2</li>
+                <li style="list-style: lower-roman;">sub elemento 3</li>
+            </ol>
+        </li>
+    </ol>
+
+
+    <form action="/formulario" method="POST">
+        <label for="nombre">Nombre</label>
+        <input value="chanchito" type="text" id="nombre" name="nombre" placeholder="Nombre"/> <!--Para poder poner el nombre-->
+        <br>
+        <label for="apellido">Apellido</label>
+        <input value="nicolas" type="text" id="apellido" name="apellido" placeholder="Chanchito feliz..."/>
+        <br>
+        <label for="comentario">Comentario</label>
+        <br>
+        <textarea col="50" rows="10" id="comentario" placeholder="ingrese comentario" name="comentario">este es un valor por defecto</textarea>
+        <br>
+        <button type="button">Tipo boton</button>
+        <button type="reset">Tipo retet</button>
+        <button type="submit">Tipo sumit</button>
+    </form> 
+    <h1>Mi primer heading</h1>
+    <h2>Mi segundo heading</h2>
+    <h3>Mi 3 heading</h3>
+    <h4>Mi 4 heading</h4>
+    <h5>Mi 5 heading</h5>
+    <h6>Chanchito feliz</h6>
+    <p>Chanchito feliz está muy feliz.
+    </p>
+    <p>Chanchito troste</p>
+    <h2>Chanchito con tenis</h2>
+    <p>Texto un <span style="color: blueviolet;">poco mas de texto </span>  que no se 
+        que mas escribir xd <br>
+        y es para mostrar <br>
+        la etiqueta span <br>
+        <a target="_blank" href="https://www.google.com">Ir a google</a> <br>
+        <img src="img/Porfiriado_cuartetodenos.jpg" height="400" width="200" />
+
+    </p>
+    <!--Este texto es un comentario-->  
+</body>
+</html>
