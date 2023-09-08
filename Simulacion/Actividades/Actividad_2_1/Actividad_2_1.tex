@@ -1,0 +1,123 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[procnames]{listings}
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{0,0,113}
+\definecolor{red}{RGB}{160,0,0}
+\definecolor{green}{RGB}{0,150,0}
+\definecolor{backcolour}{RGB}{220,220,220}
+\usepackage{titling}
+\usepackage{tcolorbox}
+\usepackage{bigints}
+
+\decimalpoint
+ 
+\lstset{language=Python, 
+        backgroundcolor=\color{backcolour},
+        basicstyle=\ttfamily\small, 
+        keywordstyle=\color{keywords},
+        commentstyle=\color{comments},
+        stringstyle=\color{red},
+        showstringspaces=false,
+        identifierstyle=\color{green},
+        procnamekeys={def,class}}
+
+\pagenumbering{gobble}
+
+%%% AQUI INSERTE EL TÍTULO DE LA ACTIVIDAD Y SU NOMBRE %%%%%
+\title{Actividad 2.1. Péndulo simple.}
+\author{Inserte aquí su nombre.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\hrule
+\begin{center}
+\noindent {\fontfamily{lmss}\selectfont
+\huge{Simulación de Procesos Físicos}
+}
+
+\noindent {\fontfamily{lmss}\selectfont
+\Large{\thetitle}
+}
+
+\noindent {\fontfamily{lmss}\selectfont
+\Large{Alumno:  \theauthor}
+}
+\bigskip
+\hrule
+\end{center}
+\bigskip{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Considere un péndulo que consta de una varilla ligera de longitud $L$ a la que se une una bola de masa $m$. El otro extremo de la varilla está unido a una pared en un punto de modo que la bola del péndulo se mueva en un círculo centrado en este punto. La posición de la masa en el tiempo t se describe completamente por el ángulo $\theta(t)$ de la masa desde la posición recta hacia abajo y se mide en la dirección contraria a las manecillas del reloj.
+
+Suponemos que las únicas dos fuerzas que actúan sobre el péndulo son la fuerza de gravedad y una fuerza debida a la fricción. La fuerza gravitacional es una fuerza constante igual a $ m g $ que actúa en dirección descendente; la componente de esta fuerza tangente al círculo de movimiento está dada por $ -m g \sin \theta $. 
+
+Se considera que la fuerza debida a la fricción es proporcional a la velocidad, es decir, $ -b L \mathrm{d}\theta / \mathrm{d} t $ para una constante $ b> 0 $. Cuando no hay fuerza debido a la fricción $ (b = 0) $, tenemos un péndulo ideal cuyo movimiento está dado por:
+\[ \theta ''(t) + \beta \theta '(t) + \alpha \sin(\theta(t)) = 0 \]
+donde $\beta= b/m$ y $\alpha = g/L$, son constantes positivas. 
+
+Podemos convertir la ecuación anterior en un sistema de ecuaciones de primer orden: 
+
+{\color{red}[Completar]}
+
+\section*{Instrucciones}
+
+\begin{itemize}
+\item Complete el desarrollo matemático para llegar a un sistema de ecuaciones de primer orden.
+\item  Escriba un código en Python para resolver el sistema de ecuaciones que describen el movimiento del péndulo simple.
+\item Utilice las condiciones iniciales $\theta(0) = \pi/2$ y $\omega(0) = 0$.
+\item Obtenga la solución numérica para tres casos: 
+\begin{enumerate}
+\item Péndulo sin amortiguamiento.
+\item Péndulo con amortiguamiento.
+\item Péndulo con amortiguamiento crítico.
+\end{enumerate}
+\item Para cada caso obtenga el plano de fases y grafique sobre el mismo la solución numérica encontrada.
+\item Complete con su código fuente y gráficas los campos indicados en la actividad.
+\item Escriba las discusiones de sus resultados en la parte correspondiente del formato. Conteste: ¿que se observa al cambiar los valores de $b$?; ¿para que sirve el diagrama de fases? y ¿qué pasaría si se cambian las condiciones iniciales?.
+\end{itemize}
+ 
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white]
+\textbf{Código}.
+\tcblower
+
+\begin{lstlisting}
+
+# C'odigo Fuente
+
+
+\end{lstlisting}
+
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tcolorbox}[colback=white]
+\textbf{Gráficas}.
+\tcblower
+
+\centering
+
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white]
+\textbf{Discusión}.
+\tcblower
+
+
+\end{tcolorbox}
+
+
+\end{document}
