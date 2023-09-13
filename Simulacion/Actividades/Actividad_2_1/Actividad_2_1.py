@@ -16,7 +16,7 @@ b = 10
 g = 9.81
 alpha = np.sqrt(g/l)
 beta = np.array([0, 2*alpha, np.sqrt(b/m)])
-print(beta)
+
 # Definiendo el tiempo y condiciones iniciales
 t = np.arange(0, 10*np.pi, 0.01)
 y0 = [np.pi/2, 0]
