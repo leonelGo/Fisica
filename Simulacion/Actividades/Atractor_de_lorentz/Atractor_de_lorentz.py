@@ -44,7 +44,7 @@ y2 = Sol_2[:, 1]
 z2 = Sol_2[:, 2]
 
 ax2= fig1.add_subplot(222, projection = '3d')
-ax2.plot(x2, y2, z2)
+ax2.plot(x2, y2, z2, color='red')
 
 ax3 = fig1.add_subplot(212)
 ax3.plot(t, x1, color = 'red', label= 'Atractor 1')

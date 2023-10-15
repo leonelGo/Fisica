@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[procnames]{listings}
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{0,0,113}
+\definecolor{red}{RGB}{160,0,0}
+\definecolor{green}{RGB}{0,150,0}
+\definecolor{backcolour}{RGB}{220,220,220}
+\usepackage{titling}
+\usepackage{tcolorbox}
+ 
+\lstset{language=Python, 
+        backgroundcolor=\color{backcolour},
+        basicstyle=\ttfamily\small, 
+        keywordstyle=\color{keywords},
+        commentstyle=\color{comments},
+        stringstyle=\color{red},
+        showstringspaces=false,
+        identifierstyle=\color{green},
+        procnamekeys={def,class}}
+
+\pagenumbering{gobble}
+
+%%% AQUI INSERTE EL TÍTULO DE LA ACTIVIDAD Y SU NOMBRE %%%%%
+\title{Actividad 3.1. Conducción de calor.}
+\author{Inserte aquí su nombre.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\hrule
+\begin{center}
+\noindent {\fontfamily{lmss}\selectfont
+\huge{Simulación de Procesos Físicos}
+}
+
+\noindent {\fontfamily{lmss}\selectfont
+\Large{\thetitle}
+}
+
+\noindent {\fontfamily{lmss}\selectfont
+\Large{Alumno:  \theauthor}
+}
+\bigskip
+\hrule
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Suponga que tenemos una barra de un material con un coeficiente de difusividad térmica $\alpha= 1$ m$^2$s, una longitud $L = 1$ m y temperatura $T=0$ $^{\circ}$C a lo largo de toda la barra. En un tiempo $t=0$, se calienta el extremo izquierdo de la barra ($x=0$) manteniéndose a una temperatura de $T=100$ $^{\circ}$C, en el lado derecho de la barra se tiene un material aislante.
+
+La conducción de calor es un proceso difusivo, y se puede aproximar resolviendo la ecuación de calor; en una dimensión:
+\begin{equation}
+\frac{\partial T}{\partial t} = \alpha \frac{\partial^2 T}{\partial x^2}
+\end{equation}
+donde $\alpha$ es un coeficiente de difusividad térmica que va a depender del tipo de material conductor y $T$ es la temperatura. Discretizando la ecuación con el esquema implícito tenemos:
+$$
+-\mu T_{j-1}^{n}+(1+2 \mu) T_{j}^{n}-\mu T_{j+1}^{n}=T_{j-1}^{n-1}
+$$
+con:
+$$
+\mu = \alpha \frac{\Delta t}{\Delta x^2}
+$$
+
+Para este tipo de problemas es conveniente introducir las condiciones de frontera de Neumann, con estas condiciones de frontera, en vez de especificar el valor de la solución en la frontera, se especifica el valor de la derivada de la solución en la frontera.
+En este caso, la C.F. de Neumann en el lado derecho de la barra se expresa como:
+\begin{equation}
+\left. \frac{\partial T}{\partial x} \right|_{x = 1} = q(t)
+\end{equation}
+y discretizando:
+\begin{equation}
+\left. \frac{\partial T}{\partial x} \right|_{x=1} \approx \frac{T^n_j - T^n_{j-1}}{\Delta x} = q(t)
+\end{equation}
+En el contexto de la conducción de calor, la derivada espacial de la temperatura es la densidad de flujo de calor o simplemente flujo de calor $ q $ con unidades de W/m$^2$. En este caso, impusimos en $ x = 1 $ un material aislante, es decir, no existe un flujo de calor:
+\begin{equation}
+\left. \frac{\partial T}{\partial x} \right|_{x=1} = 0
+\end{equation}
+Lo anterior nos indica que el cambio de temperatura cuando nos movemos en la dirección $ x $ es cero en el extremo derecho de la barra.
+
+\section*{Instrucciones}
+
+\subsection*{Ejercicio 1}
+
+\begin{itemize}
+\item Escriba un código para resolver la ecuación de difusión de calor para el ejemplo de la barra donde se implementen las condiciones de frontera de Neumann.
+\item Realice una gráfica para visualizar los resultados.
+\item Discuta los resultados.
+\end{itemize}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white]
+\textbf{Código}.
+\tcblower
+
+\begin{lstlisting}
+
+# C'odigo Fuente
+
+
+\end{lstlisting}
+
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tcolorbox}[colback=white]
+\textbf{Gráficas}.
+\tcblower
+
+\centering
+
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white]
+\textbf{Discusión}.
+\tcblower
+
+
+\end{tcolorbox}
+
+
+\end{document}

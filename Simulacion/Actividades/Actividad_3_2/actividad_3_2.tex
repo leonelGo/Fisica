@@ -1,0 +1,110 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[procnames]{listings}
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{0,0,113}
+\definecolor{red}{RGB}{160,0,0}
+\definecolor{green}{RGB}{0,150,0}
+\definecolor{backcolour}{RGB}{220,220,220}
+\usepackage{titling}
+\usepackage{tcolorbox}
+ 
+\lstset{language=Python, 
+        backgroundcolor=\color{backcolour},
+        basicstyle=\ttfamily\small, 
+        keywordstyle=\color{keywords},
+        commentstyle=\color{comments},
+        stringstyle=\color{red},
+        showstringspaces=false,
+        identifierstyle=\color{green},
+        procnamekeys={def,class}}
+
+\pagenumbering{gobble}
+
+%%% AQUI INSERTE EL TÍTULO DE LA ACTIVIDAD Y SU NOMBRE %%%%%
+\title{Actividad 3.2. Conducción de calor en un medio heterogéneo.}
+\author{Inserte aquí su nombre.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\hrule
+\begin{center}
+\noindent {\fontfamily{lmss}\selectfont
+\huge{Simulación de Procesos Físicos}
+}
+
+\noindent {\fontfamily{lmss}\selectfont
+\Large{\thetitle}
+}
+
+\noindent {\fontfamily{lmss}\selectfont
+\Large{Alumno:  \theauthor}
+}
+\bigskip
+\hrule
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Suponga que tenemos una barra de longitud $L$ construida con tres capas. Las fronteras entre las capas se denotan con $b_0 \cdots b_3$, donde $b_0 = 0$ y $b_3 = L$. Si las capas están hechas de materiales con propiedades diferentes y además estas se mantienen constantes dentro de la capa, podemos expresar el coeficiente de difusividad térmica como:
+\begin{equation*}
+\alpha(x)=\left\{\begin{array}{ll}
+\alpha_0, & b_0 \leq x<b_1 \\
+\alpha_1, & b_1 \leq x<b_2 \\
+\alpha_2, & b_2 \leq x \leq b_3
+\end{array}\right.
+\end{equation*}
+donde $\alpha_0 = 1$, $\alpha_1 = \alpha_0/2$ y $\alpha_2 = \alpha_1/2$.
+Inicialmente se tiene una temperatura $T=0$ $^{\circ}$C a lo largo de toda la barra. En un tiempo $t=0$, se calienta el extremo izquierdo ($x=0$) manteniéndose a una temperatura de $T=100$ $^{\circ}$C y en el lado derecho se tiene un material aislante.
+
+\section*{Instrucciones}
+
+\begin{itemize}
+\item Escriba un código para resolver la ecuación de difusión de calor para la barra compuesta de tres capas. Utilice $b1 = 0.25$ y $b_2 = 0.5$ para la posición de las fronteras entre capas. Se recomienda utilizar un método implícito.
+\item Realice una gráfica para visualizar los resultados.
+\item Discuta los resultados.
+\end{itemize}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white]
+\textbf{Código}.
+\tcblower
+
+\begin{lstlisting}
+
+# C'odigo Fuente
+
+
+\end{lstlisting}
+
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tcolorbox}[colback=white]
+\textbf{Gráficas}.
+\tcblower
+
+\centering
+
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colback=white]
+\textbf{Discusión}.
+\tcblower
+
+
+\end{tcolorbox}
+
+
+\end{document}
